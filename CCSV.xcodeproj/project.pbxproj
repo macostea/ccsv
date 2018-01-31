@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		152FFF8320209ADB0014BC68 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 152FFF8220209ADB0014BC68 /* main.c */; };
+		15E0B0232020D27800DA2E69 /* ccsv.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E0B0222020D27800DA2E69 /* ccsv.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		152FFF7F20209ADB0014BC68 /* CCSV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CCSV; sourceTree = BUILT_PRODUCTS_DIR; };
 		152FFF8220209ADB0014BC68 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		15E0B0212020D27800DA2E69 /* ccsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccsv.h; sourceTree = "<group>"; };
+		15E0B0222020D27800DA2E69 /* ccsv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ccsv.c; sourceTree = "<group>"; };
+		15E0B0242021C61F00DA2E69 /* csv_test_file.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = csv_test_file.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				152FFF8220209ADB0014BC68 /* main.c */,
+				15E0B0212020D27800DA2E69 /* ccsv.h */,
+				15E0B0222020D27800DA2E69 /* ccsv.c */,
+				15E0B0242021C61F00DA2E69 /* csv_test_file.csv */,
 			);
 			path = CCSV;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E0B0232020D27800DA2E69 /* ccsv.c in Sources */,
 				152FFF8320209ADB0014BC68 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
