@@ -97,6 +97,7 @@ ssize_t extendArray(void *arr, size_t newCapacity) {
 	}
 
 	arr = extendedArray;
+    return newCapacity;
 }
 
 void CSVParserNextLine(CSVParser *parser, char ***lineTokens, size_t *lineLen) {

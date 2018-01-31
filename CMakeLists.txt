@@ -4,16 +4,16 @@ project (CCSV)
 set (CCSV_VERSION_MAJOR 1)
 set (CCSV_VERSION_MINOR 0)
 
-configure_file (
-	"${PROJECT_SOURCE_DIR}/src/ccsv_config.h.in"
-	"${PROJECT_BINARY_DIR}/ccsv_config.h"
-	)
-
 include (CheckFunctionExists)
 include (CheckTypeSize)
 check_function_exists (getline HAVE_GETLINE)
 check_type_size (ssize_t HAVE_SSIZE)
 check_function_exists (strsep HAVE_STRSEP)
+
+configure_file (
+	"${PROJECT_SOURCE_DIR}/src/ccsv_config.h.in"
+	"${PROJECT_BINARY_DIR}/ccsv_config.h"
+	)
 
 include_directories("${PROJECT_BINARY_DIR}")
 include_directories("${PROJECT_SOURCE_DIR}/include")
