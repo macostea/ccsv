@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		152FFF8320209ADB0014BC68 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 152FFF8220209ADB0014BC68 /* main.c */; };
-		15E0B0232020D27800DA2E69 /* ccsv.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E0B0222020D27800DA2E69 /* ccsv.c */; };
+		15E0B0252021DB0A00DA2E69 /* csv_test_file.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15E0B0242021C61F00DA2E69 /* csv_test_file.csv */; };
+		15E0B02E2021DB5200DA2E69 /* ccsv.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E0B0222020D27800DA2E69 /* ccsv.c */; };
+		15E0B02F2021DB5800DA2E69 /* ccsv.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E0B0212020D27800DA2E69 /* ccsv.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E0B0312021DB6500DA2E69 /* libccsv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0B02A2021DB4A00DA2E69 /* libccsv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		152FFF7D20209ADB0014BC68 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				15E0B0252021DB0A00DA2E69 /* csv_test_file.csv in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -29,10 +33,19 @@
 		15E0B0212020D27800DA2E69 /* ccsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccsv.h; sourceTree = "<group>"; };
 		15E0B0222020D27800DA2E69 /* ccsv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ccsv.c; sourceTree = "<group>"; };
 		15E0B0242021C61F00DA2E69 /* csv_test_file.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = csv_test_file.csv; sourceTree = "<group>"; };
+		15E0B02A2021DB4A00DA2E69 /* libccsv.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libccsv.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		152FFF7C20209ADB0014BC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E0B0312021DB6500DA2E69 /* libccsv.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E0B0272021DB4A00DA2E69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +60,7 @@
 			children = (
 				152FFF8120209ADB0014BC68 /* CCSV */,
 				152FFF8020209ADB0014BC68 /* Products */,
+				15E0B0302021DB6500DA2E69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				152FFF7F20209ADB0014BC68 /* CCSV */,
+				15E0B02A2021DB4A00DA2E69 /* libccsv.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,7 +84,25 @@
 			path = CCSV;
 			sourceTree = "<group>";
 		};
+		15E0B0302021DB6500DA2E69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15E0B0282021DB4A00DA2E69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E0B02F2021DB5800DA2E69 /* ccsv.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		152FFF7E20209ADB0014BC68 /* CCSV */ = {
@@ -89,6 +122,23 @@
 			productReference = 152FFF7F20209ADB0014BC68 /* CCSV */;
 			productType = "com.apple.product-type.tool";
 		};
+		15E0B0292021DB4A00DA2E69 /* ccsv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E0B02B2021DB4A00DA2E69 /* Build configuration list for PBXNativeTarget "ccsv" */;
+			buildPhases = (
+				15E0B0262021DB4A00DA2E69 /* Sources */,
+				15E0B0272021DB4A00DA2E69 /* Frameworks */,
+				15E0B0282021DB4A00DA2E69 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ccsv;
+			productName = ccsv;
+			productReference = 15E0B02A2021DB4A00DA2E69 /* libccsv.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +149,10 @@
 				ORGANIZATIONNAME = "Mihai Costea";
 				TargetAttributes = {
 					152FFF7E20209ADB0014BC68 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					15E0B0292021DB4A00DA2E69 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -117,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				152FFF7E20209ADB0014BC68 /* CCSV */,
+				15E0B0292021DB4A00DA2E69 /* ccsv */,
 			);
 		};
 /* End PBXProject section */
@@ -126,8 +181,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15E0B0232020D27800DA2E69 /* ccsv.c in Sources */,
 				152FFF8320209ADB0014BC68 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E0B0262021DB4A00DA2E69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E0B02E2021DB5200DA2E69 /* ccsv.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +315,28 @@
 			};
 			name = Release;
 		};
+		15E0B02C2021DB4A00DA2E69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		15E0B02D2021DB4A00DA2E69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -270,6 +354,15 @@
 			buildConfigurations = (
 				152FFF8720209ADB0014BC68 /* Debug */,
 				152FFF8820209ADB0014BC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E0B02B2021DB4A00DA2E69 /* Build configuration list for PBXNativeTarget "ccsv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E0B02C2021DB4A00DA2E69 /* Debug */,
+				15E0B02D2021DB4A00DA2E69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

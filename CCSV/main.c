@@ -11,7 +11,7 @@
 #include "ccsv.h"
 
 int main(int argc, const char * argv[]) {
-    CSVParser *parser = CSVParserCreate("/Users/mihaicostea/Downloads/parcauto2017combustibil.csv", ",", true);
+    CSVParser *parser = CSVParserCreate("csv_test_file.csv", ",", true);
     
     CSVParserParse(parser);
     char **header = NULL;
