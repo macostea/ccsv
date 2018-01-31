@@ -1,0 +1,10 @@
+#define CCSV_VERSION_MAJOR @CCSV_VERSION_MAJOR
+#define CCSV_VERSION_MINOR @CCSV_VERSION_MINOR
+#cmakedefine HAVE_GETLINE
+#cmakedefine HAVE_SSIZE
+#cmakedefine HAVE_STRSEP
+
+#ifndef HAVE_SSIZE
+#include <basetsd.h>
+typedef SSIZE_T ssize_t;
+#endif

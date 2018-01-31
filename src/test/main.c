@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "ccsv.h"
+#include "ccsv/ccsv.h"
 
 int main(int argc, const char * argv[]) {
     CSVParser *parser = CSVParserCreate("csv_test_file.csv", ",", true);
